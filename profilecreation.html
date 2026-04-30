@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Δημιουργία Προφίλ — Πληροφοριακό Σύστημα</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./profilecreation.css">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Δημιουργία Προφίλ</h1>
+</div>
+
+<div class="card">
+
+  <div class="section-title">Τύπος Οντότητας</div>
+  <div class="type-grid">
+    <div class="type-card" onclick="selectType(this,'business')">🏢 Επιχείρηση</div>
+    <div class="type-card" onclick="selectType(this,'student')">🎓 Φοιτητική Οργάνωση</div>
+  </div>
+
+  <div class="section-title">Υποκατηγορίες</div>
+  <div class="chip-grid" id="chips">
+    <div class="chip" onclick="toggleChip(this)">Τεχνολογία</div>
+    <div class="chip" onclick="toggleChip(this)">Εκπαίδευση</div>
+    <div class="chip" onclick="toggleChip(this)">Υγεία</div>
+    <div class="chip" onclick="toggleChip(this)">Κοινωνική Δράση</div>
+  </div>
+
+  <div class="section-title">Στοιχεία</div>
+  <div class="field-group">
+    <div class="field"><label>Επωνυμία</label><input id="orgName"></div>
+    <div class="field"><label>Πόλη</label><input id="city"></div>
+  </div>
+
+  <div class="field"><label>Διεύθυνση</label><input id="address"></div>
+  <div class="field"><label>Ιστοσελίδα</label><input id="website"></div>
+  <div class="field"><label>Περιγραφή</label><textarea id="desc"></textarea></div>
+
+  <div class="section-title">Επικοινωνία</div>
+  <div class="field"><label>Email</label><input id="email"></div>
+  <div class="field"><label>Τηλέφωνο</label><input id="phone"></div>
+  <div class="field"><label>Υπεύθυνος</label><input id="contact"></div>
+
+  <button class="btn btn-primary" onclick="submitForm()">Υποβολή</button>
+
+  <div class="success-screen" id="success">
+    <h2>Επιτυχία!</h2>
+    <p>Το προφίλ υποβλήθηκε.</p>
+  </div>
+
+</div>
+
+<script src="./profilecreation.js"></script>
+</body>
+</html>
