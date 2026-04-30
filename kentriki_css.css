@@ -1,0 +1,52 @@
+/* Ορισμός χρωμάτων σύμφωνα με τις οδηγίες (μαύρο, μπλε, μωβ) */
+body {
+    background-color: #0f0f12; /* Μαύρο background [cite: 495] */
+    color: #e0e0e0;
+    font-family: Arial, sans-serif; /* Γραμματοσειρά [cite: 496] */
+}
+
+/* Χρήση ID και Classes για μορφοποίηση [cite: 435] */
+.table-container {
+    background-color: #1a1a23;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+/* Κάνει τον πίνακα να έχει ΑΚΡΙΒΩΣ το μαύρο χρώμα της σελίδας */
+.table-dark,
+.table-dark th, 
+.table-dark td {
+    background-color: #0f0f12 !important; /* Το βαθύ μαύρο του body */
+    color: #e0e0e0 !important;
+    border-bottom: 1px solid #333 !important; /* Διακριτική γραμμή διαχωρισμού */
+}
+
+/* Χρώμα όταν περνάει το ποντίκι από πάνω (hover) - ελαφρώς πιο ανοιχτό για να φαίνεται η επιλογή */
+.table-dark.table-hover tbody tr:hover td {
+    background-color: #1a1a23 !important;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Μπλε/Μωβ αποχρώσεις */
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+}
+
+.chart-container {
+    background-color: #1a1a23;
+    border-radius: 12px;
+    padding: 20px;
+    height: 350px;
+}
+
+/* CSS Media Queries για προσαρμοστικότητα [cite: 35, 73] */
+@media screen and (max-width: 768px) {
+    .h2 {
+        font-size: 1.5rem; /* Μικρότερη επικεφαλίδα σε μικρές οθόνες [cite: 497] */
+    }
+}
+
+.badge-pending { background-color: #ffd166; color: #000; }
+.badge-approved { background-color: #06d6a0; color: #000; }
+.badge-rejected { background-color: #ef476f; color: #fff; }
