@@ -1,0 +1,90 @@
+/* ================= BASE THEME (ίδιο με profilecreation) ================= */
+:root {
+  --navy: #0a0e2a;
+  --navy-mid: #111540;
+  --purple-mid: #3d2882;
+  --purple-acc: #6c4fd4;
+  --violet: #7c3aed;
+  --white: #f0f2ff;
+  --white-dim: rgba(240,242,255,0.55);
+  --white-faint: rgba(240,242,255,0.08);
+  --border: rgba(108,79,212,0.35);
+  --border-lit: rgba(108,79,212,0.7);
+}
+
+/* ================= BODY ================= */
+body {
+    background: radial-gradient(ellipse 80% 60% at 10% 0%, rgba(45,27,105,0.55) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 50% at 90% 100%, rgba(29,11,80,0.45) 0%, transparent 55%),
+                var(--navy);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ================= CONTAINERS ================= */
+.table-container {
+    background: rgba(17,21,64,0.85);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+
+/* ================= TABLE ================= */
+.table-dark,
+.table-dark th, 
+.table-dark td {
+    background: transparent !important;
+    color: var(--white) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+/* Hover row */
+.table-dark.table-hover tbody tr:hover td {
+    background: rgba(124,58,237,0.12) !important;
+}
+
+/* ================= STAT CARDS ================= */
+.stat-card {
+    background: linear-gradient(135deg, var(--purple-mid), var(--violet));
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(124,58,237,0.25);
+}
+
+/* ================= CHART ================= */
+.chart-container {
+    background: rgba(17,21,64,0.85);
+    border-radius: 16px;
+    padding: 20px;
+    height: 350px;
+    border: 1px solid var(--border);
+    backdrop-filter: blur(14px);
+}
+
+/* ================= BADGES ================= */
+.badge-pending {
+    background: rgba(255,209,102,0.15);
+    color: #ffd166;
+    border: 1px solid rgba(255,209,102,0.4);
+}
+
+.badge-approved {
+    background: rgba(52,211,153,0.15);
+    color: #34d399;
+    border: 1px solid rgba(52,211,153,0.4);
+}
+
+.badge-rejected {
+    background: rgba(248,113,113,0.15);
+    color: #f87171;
+    border: 1px solid rgba(248,113,113,0.4);
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+    .h2 {
+        font-size: 1.5rem;
+    }
+}
