@@ -1,15 +1,12 @@
-/* ==========================================================================
-   ΕΝΙΑΙΟ ΒΑΣΙΚΟ ΘΕΜΑ (Dashboard & Φόρμες)
-   ========================================================================== */
 
-/* === RESET === */
+/* RESET*/
 *, *::before, *::after { 
     box-sizing: border-box; 
     margin: 0; 
     padding: 0; 
 }
 
-/* === ΜΕΤΑΒΛΗΤΕΣ === */
+/*ΜΕΤΑΒΛΗΤΕΣ*/
 :root {
     --navy: #0a0e2a;
     --navy-mid: #111540;
@@ -28,7 +25,7 @@
     --radius-sm: 8px;
 }
 
-/* === ΒΑΣΙΚΗ ΣΕΛΙΔΑ (BODY) === */
+/* ΚΕΝΤΡΙΚΗ ΣΕΛΙΔΑ */
 body {
     min-height: 100vh;
     background: radial-gradient(ellipse 80% 60% at 10% 0%, rgba(45, 27, 105, 0.55) 0%, transparent 60%),
@@ -39,7 +36,7 @@ body {
     padding: 3rem 1rem;
 }
 
-/* === ΠΛΟΗΓΗΣΗ (NAVBAR) === */
+/*  ΠΛΟΗΓΗΣΗ (NAVBAR)  */
 .navbar {
     background: rgba(17, 21, 64, 0.9) !important;
     border-bottom: 1px solid var(--border);
@@ -50,7 +47,7 @@ body {
     width: auto;
 }
 
-/* === ΤΥΠΟΓΡΑΦΙΑ & HERO === */
+/*  ΤΥΠΟΓΡΑΦΙΑ & HERO  */
 .header { 
     text-align: center; 
     margin-bottom: 2rem; 
@@ -85,7 +82,7 @@ body {
     opacity: 0.9;
 }
 
-/* === ΚΑΡΤΕΣ & CONTAINERS (Glassmorphism) === */
+/*  ΚΑΡΤΕΣ & CONTAINERS (Glassmorphism)  */
 .card {
     max-width: 780px;
     margin: 0 auto;
@@ -141,7 +138,7 @@ body {
     box-shadow: 0 10px 30px rgba(124, 58, 237, 0.25);
 }
 
-/* === ΦΟΡΜΕΣ & ΠΕΔΙΑ ΕΙΣΑΓΩΓΗΣ === */
+/*  ΦΟΡΜΕΣ & ΠΕΔΙΑ ΕΙΣΑΓΩΓΗΣ  */
 .field-group { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -170,7 +167,7 @@ body {
     color: var(--white);
 }
 
-/* === ΕΠΙΛΟΓΕΣ (Type Cards & Chips) === */
+/*  ΕΠΙΛΟΓΕΣ (Type Cards & Chips)  */
 .type-grid { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -211,7 +208,7 @@ body {
     border-color: var(--violet);
 }
 
-/* === ΚΟΥΜΠΙΑ === */
+/*  ΚΟΥΜΠΙΑ  */
 .btn {
     padding: 0.7rem 1.4rem;
     border-radius: var(--radius-sm);
@@ -231,7 +228,7 @@ body {
     opacity: 0.9;
 }
 
-/* === ΠΙΝΑΚΕΣ (Tables) === */
+/*  ΠΙΝΑΚΕΣ (Tables)  */
 .table-dark,
 .table-dark th, 
 .table-dark td {
@@ -244,7 +241,7 @@ body {
     background: rgba(124, 58, 237, 0.12) !important;
 }
 
-/* === ΕΤΙΚΕΤΕΣ (Badges) === */
+/*  ΕΤΙΚΕΤΕΣ (Badges)  */
 .badge-pending {
     background: rgba(255, 209, 102, 0.15);
     color: #ffd166;
@@ -263,7 +260,7 @@ body {
     border: 1px solid rgba(248, 113, 113, 0.4);
 }
 
-/* === FOOTER === */
+/*  FOOTER  */
 .footer {
     text-align: center;
     margin: 50px 0 20px;
@@ -271,7 +268,7 @@ body {
     font-size: 14px;
 }
 
-/* === ΟΘΟΝΕΣ ΕΠΙΤΥΧΙΑΣ & ANIMATIONS === */
+/*  ΟΘΟΝΕΣ ΕΠΙΤΥΧΙΑΣ & ANIMATIONS  */
 .success-screen { 
     display: none; 
     text-align: center; 
@@ -294,7 +291,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* === RESPONSIVE (Κινητά) === */
+/*  RESPONSIVE (Κινητά)  */
 @media screen and (max-width: 768px) {
     .h2 {
         font-size: 1.5rem;
