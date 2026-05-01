@@ -71,12 +71,12 @@ body {
 }
 
 .section-title {
-    font-family: 'Syne', sans-serif;
+    font-family: "Gill Sans Extrabold", sans-serif;
     font-size: 0.9rem;
     font-weight: 800;
-    color: var(--white);
+    color: #babbff;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     margin: 30px 0 20px;
     display: block;
     opacity: 0.9;
