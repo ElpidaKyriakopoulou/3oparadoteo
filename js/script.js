@@ -1,6 +1,3 @@
-// ==========================================
-// 1. ΚΟΙΝΑ ΔΕΔΟΜΕΝΑ & ΒΟΗΘΗΤΙΚΕΣ ΣΥΝΑΡΤΗΣΕΙΣ
-// ==========================================
 
 const defaultProposals = [
   {
@@ -39,7 +36,7 @@ function getBadgeClass(status) {
 function populateRequestDetails() {
   if (!request) {
     alert("Δεν βρέθηκε αίτημα.");
-    window.location.href = "kentriki_html.html";
+    window.location.href = "kentriki.html";
     return;
   }
   document.getElementById("companyName").textContent = request.company;
@@ -74,7 +71,7 @@ function createStatus() {
   localStorage.setItem("proposals", JSON.stringify(proposals));
 
   alert("Το status δημιουργήθηκε επιτυχώς.");
-  window.location.href = "kentriki_html.html";
+  window.location.href = "kentriki.html";
 }
 
 function renderStatus() {
@@ -92,7 +89,7 @@ function updateStatus(newStatus) {
 function sendUpdate() {
   const comment = document.getElementById("comment").value;
   alert("Ο οργανισμός ενημερώθηκε.\n\nΝέο status: " + request.status + "\n\nΣχόλιο: " + comment);
-  window.location.href = "kentriki_html.html";
+  window.location.href = "kentriki.html";
 }
 
 
