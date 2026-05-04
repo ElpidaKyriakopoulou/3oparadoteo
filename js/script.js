@@ -34,11 +34,15 @@ function getBadgeClass(status) {
 
 // Κοινή συνάρτηση για να γεμίζει τα στοιχεία του οργανισμού στις σελίδες edit/create
 function populateRequestDetails() {
+  // Αν το request δεν βρέθηκε (π.χ. πρώτη φορά στο κινητό)
   if (!request) {
-    alert("Δεν βρέθηκε αίτημα.");
-    window.location.href = "kentriki.html";
-    return;
+    // Επιλέγουμε αυτόματα το πρώτο από τα default proposals (TechNova)
+    request = proposals[0];
+    // Προαιρετικά το αποθηκεύουμε κιόλας για να υπάρχει
+    localStorage.setItem("selectedRequestId", request.id);
   }
+
+  // Τώρα γεμίζουμε τα στοιχεία κανονικά χωρίς alert
   document.getElementById("companyName").textContent = request.company;
   document.getElementById("requestType").textContent = request.type;
   document.getElementById("requestDate").textContent = request.date;
@@ -142,7 +146,7 @@ function saveDraft() {
 
 function submitForm(){
   const currentPage = document.body.dataset.page;
-  
+
   if (currentPage === 'profilecreation') {
     document.getElementById('success').classList.add('show');
   } else if (currentPage === 'submission') {
@@ -154,7 +158,7 @@ function submitForm(){
 
 
 const pageHandlers = {
-  
+
   'kentriki': () => {
     const tableBody = document.getElementById("requestsBody");
     tableBody.innerHTML = "";
@@ -208,7 +212,7 @@ const pageHandlers = {
   },
 
   'profilecreation': () => {
-    
+
   },
 
   'submission': () => {
